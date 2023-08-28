@@ -1,0 +1,19 @@
+﻿body {
+
+}
+#btnClear {
+    color: white;
+    font-size: 16px;
+    background-color: blue;
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+}
+#btnCalculate {
+    color: white;
+    font-size: 16px;
+    background-color: green;
+    padding: 6px;
+    border: none;
+    border-radius: 4px;
+}
