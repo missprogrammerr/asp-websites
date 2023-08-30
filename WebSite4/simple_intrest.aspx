@@ -29,12 +29,13 @@
     <asp:TextBox runat="server" ID="txtTime"/>
     <span id="errTime" runat="server"></span>
     <br /><br />
-
+    <span runat="server" id="errResult"></span>
+    <br />
     <span runat="server" id="intrest">Intrest: </span>
     <br /><br />
     <span runat="server" id="totalplusintrest">Total plus intrest: </span>
     <br /><br />
-    <asp:Button runat="server" ID="btnResult" Text="Calculate"/>
+    <asp:Button runat="server" ID="btnResult" Text="Calculate" OnClick="btnResult_Click"/>
 
     </div>
     </form>

@@ -43,18 +43,18 @@
         <br /><br />
         <asp:Label runat="server" ID="lblBloodgrp">Blood Group:</asp:Label>
         <asp:DropDownList runat="server" ID="ddBloodgrp">
-        <asp:ListItem Text="A+" Value="A+" />
-        <asp:ListItem Text="B+" Value="B+" />
-        <asp:ListItem Text="B-" Value="B-" />
-        <asp:ListItem Text="O-" Value="O-" />
-        <asp:ListItem Text="O+" Value="O+" />
+        <asp:ListItem Text="A+" Value="a+" />
+        <asp:ListItem Text="B+" Value="b+" />
+        <asp:ListItem Text="B-" Value="b-" />
+        <asp:ListItem Text="O-" Value="o-" />
+        <asp:ListItem Text="O+" Value="o+" />
         </asp:DropDownList>
         <br /><br />
         <asp:Label runat="server" ID="lblDepartment">Department:</asp:Label>
         <asp:RadioButtonList runat="server" ID="departmentList">
-        <asp:ListItem Text="CSE" Value="CSE" />
-        <asp:ListItem Text="EEE" Value="EEE" />
-        <asp:ListItem Text="BBA" Value="BBA" />
+        <asp:ListItem Text="CSE" Value="cse" />
+        <asp:ListItem Text="EEE" Value="eee" />
+        <asp:ListItem Text="BBA" Value="bba" />
         </asp:RadioButtonList>
         <br /><br />
         <asp:Label runat="server" ID="lblCourses">Courses:</asp:Label>

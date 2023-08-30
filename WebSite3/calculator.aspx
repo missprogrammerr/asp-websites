@@ -14,11 +14,12 @@
     <asp:TextBox runat="server" ID="num2" placeholder="Number 2" />
     <br /><br />
     <span runat="server" id="result"></span>
-    <asp:Button runat="server" Text="Add" ID="btnAdd"/>
-    <asp:Button runat="server" Text="Subtract" ID="btnSubtract"/>
     <br /><br />
-    <asp:Button runat="server" Text="Divide" ID="btnDivide"/>
-    <asp:Button runat="server" Text="Multiply" ID="btnMultiply"/>
+    <asp:Button runat="server" Text="Add" ID="btnAdd" OnClick="btnAdd_Click"/>
+    <asp:Button runat="server" Text="Subtract" ID="btnSubtract" OnClick="btnSubtract_Click"/>
+    <br /><br />
+    <asp:Button runat="server" Text="Divide" ID="btnDivide" OnClick="btnDivide_Click"/>
+    <asp:Button runat="server" Text="Multiply" ID="btnMultiply" OnClick="btnMultiply_Click"/>
     </div>
     </form>
 </body>
