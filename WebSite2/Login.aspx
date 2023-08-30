@@ -9,6 +9,8 @@
 <body>
     <form id="form1" runat="server">
     <div>
+    <span id="errLogin" runat="server"></span>
+    <br />
     <asp:Label runat="server" Text="Username" ID="lblUsername" />
     <asp:TextBox runat="server" ID="txtUsername" placeholder="Username" />
     <span id="errUsername" runat="server"></span>

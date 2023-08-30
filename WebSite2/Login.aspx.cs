@@ -13,15 +13,33 @@ public partial class Login : System.Web.UI.Page
     }
     protected void btnLogin_Click(object sender, EventArgs e)
     {
+        //get username and password
+        string username = txtUsername.Text;
+        string password = txtPassword.Text;
+        int errCount = 0;
         //reset error message
         errPassword.InnerText = errUsername.InnerText = String.Empty;
         //check username for empty and null value
         if (String.IsNullOrEmpty(txtUsername.Text)) {
+            errCount++;
             errUsername.InnerText = "Please enter username";
         }
         //check password for empty and null value
         if (String.IsNullOrEmpty(txtPassword.Text)) {
+            errCount++;
             errPassword.InnerText = "Please enter password";
+        }
+        if (errCount == 0)
+        {
+            if (username == "astra" && password == "paradox")
+            {   //store data into session
+                Session.Add("username", username);
+                Response.Redirect("Dashboard.aspx");
+            }
+            else
+            {
+                errLogin.InnerText = "Login failed!";
+            }
         }
     }
 }

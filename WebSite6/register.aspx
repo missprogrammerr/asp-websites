@@ -26,6 +26,51 @@
         <asp:Label runat="server" ID="lblPhone">Phone Number:</asp:Label>
         <asp:TextBox runat="server" ID="txtPhone"/>
         <br /><br />
+        <asp:Label runat="server" ID="lblEmail">Email</asp:Label>
+        <asp:TextBox runat="server" ID="txtEmail" placeholder="sample@example.com"></asp:TextBox>
+        <br /><br />
+        <asp:Label runat="server" ID="lblGender">Gender:</asp:Label>
+        <asp:RadioButtonList runat="server" ID="chkGender">
+        <asp:ListItem Text="Male" Value="male" />
+        <asp:ListItem Text="Female" Value="female" />
+        <asp:ListItem Text="Others" Value="others" />
+        </asp:RadioButtonList>
+        <br /><br />
+        <asp:Label runat="server" ID="lblDob">Date of birth:</asp:Label>
+        <br /><br />
+        <asp:Label runat="server" ID="lblAddress">Address</asp:Label>
+        <asp:TextBox runat="server" ID="txtAddress" placeholder="Street- House- Road-" />
+        <br /><br />
+        <asp:Label runat="server" ID="lblBloodgrp">Blood Group:</asp:Label>
+        <asp:DropDownList runat="server" ID="ddBloodgrp">
+        <asp:ListItem Text="A+" Value="A+" />
+        <asp:ListItem Text="B+" Value="B+" />
+        <asp:ListItem Text="B-" Value="B-" />
+        <asp:ListItem Text="O-" Value="O-" />
+        <asp:ListItem Text="O+" Value="O+" />
+        </asp:DropDownList>
+        <br /><br />
+        <asp:Label runat="server" ID="lblDepartment">Department:</asp:Label>
+        <asp:RadioButtonList runat="server" ID="departmentList">
+        <asp:ListItem Text="CSE" Value="CSE" />
+        <asp:ListItem Text="EEE" Value="EEE" />
+        <asp:ListItem Text="BBA" Value="BBA" />
+        </asp:RadioButtonList>
+        <br /><br />
+        <asp:Label runat="server" ID="lblCourses">Courses:</asp:Label>
+        <asp:CheckBoxList runat="server" ID="courses">
+        <asp:ListItem Text="C" Value="C"/>
+        <asp:ListItem Text="C++" Value="c++" />
+        <asp:ListItem Text="Java" Value="java" />
+        <asp:ListItem Text="AI" Value="ai" />
+        <asp:ListItem Text="Machine Learning" Value="ml" />
+        </asp:CheckBoxList>
+        <br /><br />
+        <asp:Label runat="server" ID="lblPhoto">Photo:</asp:Label>
+        <asp:FileUpload runat="server" ID="filePhoto" />
+        <br /><br />
+        <asp:Button runat="server" Text="Submit" Value="Submit" ID="btnSubmit"/>
+        <asp:Button runat="server" Text="Reset" Value="Reset" ID="btnReset"/>
     </div>
     </form>
 </body>
