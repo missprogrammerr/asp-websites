@@ -36,10 +36,10 @@ public partial class Login : System.Web.UI.Page
                 Session.Add("username", username);
 
                 //store data into cookie
-                HttpCookie cokie = new HttpCookie("userinfo");
-                cokie.Value = username;
+                HttpCookie cookie = new HttpCookie("userinfo");
+                cookie.Value = username;
                 cookie.Expires = DateTime.Now.AddDays(1);
-                Response.Cookies.Add(cokie);
+                Response.Cookies.Add(cookie);
 
                 Response.Redirect("Dashboard.aspx");
             }
