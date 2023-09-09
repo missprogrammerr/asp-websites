@@ -12,6 +12,12 @@ public partial class Dashboard : System.Web.UI.Page
         if (Session["username"] == null)
         {
             Response.Redirect("Login.aspx");
+        }else{
+            HttpCookie cookie = Request.Cookies["userinfo"];
+            if(cookie != null){
+                string cookieUser = cookie.Value;
+                greetUser.InnerText = "Welcome back "+cookieUser;
+            }
         }
     }
     protected void btnLogout_Click(object sender, EventArgs e)

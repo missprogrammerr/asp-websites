@@ -34,6 +34,13 @@ public partial class Login : System.Web.UI.Page
             if (username == "astra" && password == "paradox")
             {   //store data into session
                 Session.Add("username", username);
+
+                //store data into cookie
+                HttpCookie cokie = new HttpCookie("userinfo");
+                cokie.Value = username;
+                cookie.Expires = DateTime.Now.AddDays(1);
+                Response.Cookies.Add(cokie);
+
                 Response.Redirect("Dashboard.aspx");
             }
             else

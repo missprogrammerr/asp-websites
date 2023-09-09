@@ -10,14 +10,14 @@
 <body>
     <form id="form1" runat="server">
     <div>
-        <div id="heading">
+        <div id="heading" runat="server">
             <h3>Student Registration Form</h3>
         </div>
         <br />
         <asp:Label runat="server" ID="lblName">Name:</asp:Label>
         <asp:TextBox runat="server" ID="txtName"/>
         <br/>
-        <span id="errName"></span>
+        <span id="errName" runat="server"></span>
         <br /><br />
         <asp:Label runat="server" ID="lblFather">Father's Name:</asp:Label>
         <asp:TextBox runat="server" ID="txtFather"/>
@@ -27,17 +27,17 @@
         <asp:Label runat="server" ID="lblMother">Mother's Name:</asp:Label>
         <asp:TextBox runat="server" ID="txtMother"/>
         <br/>
-        <span id="errMother"></span>
+        <span id="errMother" runat="server"></span>
         <br /><br />
         <asp:Label runat="server" ID="lblPhone">Phone Number:</asp:Label>
         <asp:TextBox runat="server" ID="txtPhone"/>
         <br/>
-        <span id="errPhone"></span>
+        <span id="errPhone" runat="server"></span>
         <br /><br />
         <asp:Label runat="server" ID="lblEmail">Email</asp:Label>
         <asp:TextBox runat="server" ID="txtEmail" placeholder="sample@example.com"></asp:TextBox>
         <br/>
-        <span id="errEmail"></span>
+        <span id="errEmail" runat="server"></span>
         <br /><br />
         <asp:Label runat="server" ID="lblGender">Gender:</asp:Label>
         <asp:RadioButtonList runat="server" ID="chkGender">
@@ -46,17 +46,17 @@
         <asp:ListItem Text="Others" Value="others" />
         </asp:RadioButtonList>
         <br/>
-        <span id="errGender"></span>
+        <span id="errGender" runat="server"></span>
         <br /><br />
         <asp:Label runat="server" ID="lblDob">Date of birth:</asp:Label>
         <asp:TextBox ID="txtDob" runat="server" Text='<%# Bind("DateofBirth", "{0:yyyy-MM-dd}") %>' TextMode="Date"></asp:TextBox>
         <br/>
-        <span id="errDob"></span>
+        <span id="errDob" runat="server"></span>
         <br /><br />
         <asp:Label runat="server" ID="lblAddress">Address</asp:Label>
         <asp:TextBox runat="server" ID="txtAddress" placeholder="Street- House- Road-" />
         <br/>
-        <span id="errAddress"></span>
+        <span id="errAddress" runat="server"></span>
         <br /><br />
         <asp:Label runat="server" ID="lblBloodgrp">Blood Group:</asp:Label>
         <asp:DropDownList runat="server" ID="ddBloodgrp">
@@ -76,7 +76,7 @@
         <asp:ListItem Text="BBA" Value="bba" />
         </asp:RadioButtonList>
         <br/>
-        <span id="errDepartment"></span>
+        <span id="errDepartment" runat="server"></span>
         <br /><br />
         <asp:Label runat="server" ID="lblCourses">Courses:</asp:Label>
         <asp:CheckBoxList runat="server" ID="courses">
@@ -87,15 +87,16 @@
         <asp:ListItem Text="Machine Learning" Value="ml" />
         </asp:CheckBoxList>
         <br/>
-        <span id="errCourses"></span>
+        <span id="errCourses" runat="server"></span>
         <br /><br />
         <asp:Label runat="server" ID="lblPhoto">Photo:</asp:Label>
         <asp:FileUpload runat="server" ID="filePhoto" />
         <br/>
-        <span id="errPhoto"></span>
+        <span id="errPhoto" runat="server"></span>
         <br /><br />
-        <asp:Button runat="server" Text="Submit" Value="Submit" ID="btnSubmit"/>
-        <asp:Button runat="server" Text="Reset" Value="Reset" ID="btnReset"/>
+        <asp:Button runat="server" Text="Submit" Value="Submit" ID="btnSubmit" OnClick="btnSubmit_Click"/>
+        <asp:Button runat="server" Text="Reset" Value="Reset" ID="btnReset" OnClick="btnReset_Click"/>
+        <span id="regSuccess" runat="server"></span>
     </div>
     </form>
 </body>
