@@ -18,7 +18,7 @@ public partial class register : System.Web.UI.Page
         string mother = txtMother.Text;
         string  phone = txtPhone.Text;
         string email = txtEmail.Text;
-        string address = txtEmail.Text;
+        string address = txtAddress.Text;
         string gender = chkGender.Text;
         string dob = txtDob.Text;
         string blood_grp = ddBloodgrp.Text;
