@@ -7,7 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
 
-namespace PNCWebAPP1
+/*namespace PNCWebAPP1
 {
     public partial class Register : System.Web.UI.Page
     {
@@ -97,4 +97,4 @@ namespace PNCWebAPP1
 
         }
     }
-}
+}*/

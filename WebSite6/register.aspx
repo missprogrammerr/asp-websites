@@ -22,7 +22,7 @@
         <asp:Label runat="server" ID="lblFather">Father's Name:</asp:Label>
         <asp:TextBox runat="server" ID="txtFather"/>
         <br/>
-        <span id="errFather"></span>
+        <span id="errFather" runat="server"></span>
         <br /><br />
         <asp:Label runat="server" ID="lblMother">Mother's Name:</asp:Label>
         <asp:TextBox runat="server" ID="txtMother"/>
@@ -67,7 +67,7 @@
         <asp:ListItem Text="O+" Value="o+" />
         </asp:DropDownList>
         <br/>
-        <span id="errBloodgrp"></span>
+        <span id="errBloodgrp" runat="server"></span>
         <br /><br />
         <asp:Label runat="server" ID="lblDepartment">Department:</asp:Label>
         <asp:RadioButtonList runat="server" ID="departmentList">
@@ -87,7 +87,7 @@
         <asp:ListItem Text="Machine Learning" Value="ml" />
         </asp:CheckBoxList>
         <br/>
-        <span id="errCourses" runat="server"></span>
+        <span id="errCourse" runat="server"></span>
         <br /><br />
         <asp:Label runat="server" ID="lblPhoto">Photo:</asp:Label>
         <asp:FileUpload runat="server" ID="filePhoto" />
@@ -95,7 +95,7 @@
         <span id="errPhoto" runat="server"></span>
         <br /><br />
         <asp:Button runat="server" Text="Submit" Value="Submit" ID="btnSubmit" OnClick="btnSubmit_Click"/>
-        <asp:Button runat="server" Text="Reset" Value="Reset" ID="btnReset" OnClick="btnReset_Click"/>
+        <asp:Button runat="server" Text="Reset" Value="Reset" ID="btnReset"/>
         <span id="regSuccess" runat="server"></span>
     </div>
     </form>

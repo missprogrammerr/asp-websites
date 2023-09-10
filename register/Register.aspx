@@ -1,4 +1,4 @@
-﻿<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="PNCWebAPP1.Register" %>
+﻿<!--<%@ Page Language="C#" AutoEventWireup="true" CodeBehind="Register.aspx.cs" Inherits="PNCWebAPP1.Register" %>
 
 <!DOCTYPE html>
 
@@ -47,4 +47,4 @@
         </div>
     </form>
 </body>
-</html>
+</html> -->

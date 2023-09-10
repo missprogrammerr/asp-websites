@@ -11,18 +11,19 @@ public partial class register : System.Web.UI.Page
     {
 
     }
-    protected void btnSubmit_Click(object sender, EventArgs e){
+    protected void btnSubmit_Click(object sender, EventArgs e)
+    {
         string name = txtName.Text;
         string father = txtFather.Text;
         string mother = txtMother.Text;
         string  phone = txtPhone.Text;
         string email = txtEmail.Text;
         string address = txtEmail.Text;
-        string gender = chkGender.Value;
-        string dob = txtDob.Value;
-        string blood_grp = ddBloodgrp.Value;
-        string department = departmentList.Value;
-        string course = courses.Value;
+        string gender = chkGender.Text;
+        string dob = txtDob.Text;
+        string blood_grp = ddBloodgrp.Text;
+        string department = departmentList.Text;
+        string course = courses.Text;
         //filePhoto.HasFile
         if(String.IsNullOrEmpty(name)){
             errName.InnerText = "Please enter name!";
