@@ -45,3 +45,38 @@
 
 <asp:Button runat="server" Text="Add Book" ID="btnAdd" />
 <asp:Button runat="server" Text="View Books" ID="btnView" />
+
+//list books
+
+<span id="msgInfo" runat="server"></span>
+<form id="form1" runat="server">
+<div>
+<asp:GridView ID="gridListBooks" runat="server" AutoGenerateColumns="false">
+<Columns>
+<asp:BoundField ItemStyle-Width="150px" DataField="id"
+HeaderText="Book ID" />
+<asp:BoundField ItemStyle-Width="150px" DataField="title"
+HeaderText="Book Title" />
+<asp:BoundField ItemStyle-Width="150px" DataField="publisher"
+HeaderText="Publisher" />
+<asp:BoundField ItemStyle-Width="150px" DataField="author"
+HeaderText="Author" />
+<asp:BoundField ItemStyle-Width="150px" DataField="edition"
+HeaderText="Edition" />
+<asp:BoundField ItemStyle-Width="150px" DataField="no_of_pages"
+HeaderText="No of pages" />
+<asp:BoundField ItemStyle-Width="150px" DataField="price"
+HeaderText="Price" />
+<asp:BoundField ItemStyle-Width="150px" DataField="publish_date"
+HeaderText="Publish Date" />
+</Columns>
+</asp:GridView>
+</div>
+<div>
+<asp:TextBox runat="server" ID="txtId"/>
+<asp:Button Text="Edit" ID="btnEdit" runat="server" OnClick="btnEdit_Click"
+/>
+<asp:Button Text="Delete" ID="btnDelete" runat="server"
+OnClick="btnDelete_Click" />
+</div>
+</form>
