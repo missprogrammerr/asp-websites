@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
+using System.Configuration;
 using System.Web.UI.WebControls;
 using MySql.Data.MySqlClient;
 
 public partial class Register : System.Web.UI.Page
 {
+    MySqlConnection connect = new MySqlConnection(ConfigurationManager.ConnectionStrings["ConnectionString"].ConnectionString);
     protected void Page_Load(object sender, EventArgs e)
     {
 
@@ -58,7 +60,7 @@ public partial class Register : System.Web.UI.Page
             }
             if (String.IsNullOrEmpty(password2))
             {
-                errPassword1.InnerText = "Re-type password";
+                errPassword2.InnerText = "Re-type password";
                 error++;
             }
 
@@ -67,8 +69,6 @@ public partial class Register : System.Web.UI.Page
                 //database connection
                 try
                 {
-                    conn = "Server=localhost;Database=college;Uid=root;Pwd=;";
-                    connect = new MySqlConnection(conn);
                     connect.Open();
                     MySqlCommand cmd = new MySqlCommand("insert into students(name,email,phone,faculty,gender,password) values (@n,@e,@ph,@f,@g,@p)", connect);
                     cmd.Parameters.AddWithValue("@n", name);
@@ -84,6 +84,10 @@ public partial class Register : System.Web.UI.Page
                 catch (MySqlException mex)
                 {
                     error_messsage.InnerText = "Error at Register Page" + mex.Message;
+                }
+                finally
+                {
+                    connect.Close();
                 }
             }
 
