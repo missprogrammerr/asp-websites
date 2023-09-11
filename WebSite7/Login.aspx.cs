@@ -28,7 +28,9 @@ public partial class Login : System.Web.UI.Page
             try
             {
                 connect.Open();
-                MySqlCommand cmd = new MySqlCommand("SELECT * FROM students WHERE email=email AND password=password;", connect);
+                MySqlCommand cmd = new MySqlCommand("SELECT * FROM students WHERE email=@email AND password=@password;", connect);
+                cmd.Parameters.AddWithValue("@email", email);
+                cmd.Parameters.AddWithValue("@password", password);
                 object result = cmd.ExecuteScalar();
                 if (result != null)
                 {
