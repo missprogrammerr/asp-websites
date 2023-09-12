@@ -32,11 +32,13 @@
     </div>
     <br /><br />
     <div>
-    <asp:TextBox runat="server" ID="txtId"/>
+    <asp:TextBox runat="server" ID="txtBookid"/>
     <asp:Button Text="Edit" ID="btnEdit" runat="server" OnClick="btnEdit_Click"
     />
     <asp:Button Text="Delete" ID="btnDelete" runat="server"
     OnClick="btnDelete_Click" />
+    <br /><br />
+    <span id="message" runat="server"></span>
     </div>
     </form>
 </body>

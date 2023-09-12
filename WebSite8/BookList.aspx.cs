@@ -17,10 +17,30 @@ public partial class BookList : System.Web.UI.Page
     }
     protected void btnEdit_Click(object sender, EventArgs e)
     {
-
+        string book_id = txtBookid.Text;
+        Response.Redirect("UpdateBook.aspx?id=" + book_id);
     }
     protected void btnDelete_Click(object sender, EventArgs e)
     {
+        int deleteId = int.Parse(txtBookid.Text);
+        try
+        {
+            connect.Open();
+            MySqlCommand cmd = new MySqlCommand("DELETE FROM book_list WHERE book_id=@book_id;", connect);
+            cmd.Parameters.AddWithValue("@book_id", deleteId);
+            cmd.ExecuteNonQuery();
+            message.InnerText = "Book deleted successfully!";
+            getDataForGrid();
+            txtBookid.Text = "";
+        }
+        catch (MySqlException mex)
+        {
+            message.InnerText = "Update Error: " + mex.Message;
+        }
+        finally
+        {
+            connect.Close();
+        }
 
     }
     private void getDataForGrid()
